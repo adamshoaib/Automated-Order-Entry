@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani&display=swap");
+
+#root {
+  display: flex;
+  height: 100%;
+  margin: 0 auto;
+}
+
+:root {
+  --vh: 1vh;
+  --font-family: "Rajdhani", sans-serif;
+  --title-font: "Ubuntu", sans-serif;
+  --font-color: black;
+}
+
+.App {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  height: 100%;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  height: calc(100 * var(--vh));
+  margin: 0;
+  background-color: var(--body-background);
+  font-family: var(--font-family);
+  font-variant-ligatures: none;
+  overflow: scroll;
+}
+
+label {
+  font-family: var(--font-family) !important;
+  color: var(--font-color) !important;
+}
+
+p {
+  font-family: var(--font-family) !important;
+  color: var(--font-color) !important;
+}
+
+div {
+  font-family: var(--font-family) !important;
+  color: var(--font-color) !important;
+}
+
+button {
+  font-family: var(--font-family) !important;
+  color: var(--font-color) !important;
+}
+
+h4 {
+  font-family: var(--font-family) !important;
+  color: var(--font-color) !important;
+}
+
+li {
+  font-family: var(--font-family) !important;
+  color: var(--font-color) !important;
+}
+
+ul {
+  font-family: var(--font-family) !important;
+  color: var(--font-color) !important;
+}
+
+.button-root {
+  min-width: 120px;
+  min-height: 40px;
+  border-radius: 8px;
+  border: 0.2px solid black;
+  background-color: rgb(194, 239, 239);
+}
+
+.MuiInputBase-root {
+  min-height: 40px !important;
+  height: 40px !important;
+  width: 140px !important;
+}
+
+// Tool Component - START
+
+.tool-root {
+  display: flex;
+  flex-direction: row;
+}
+
+.tool-info {
+  flex: 30%;
+}
+
+.tool-details {
+  flex: 70%;
+}
+
+// Tool Component - END
