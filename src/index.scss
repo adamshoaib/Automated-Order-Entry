@@ -75,12 +75,22 @@ ul {
   border-radius: 8px;
   border: 0.2px solid black;
   background-color: rgb(194, 239, 239);
+  cursor: pointer;
+}
+
+.button-root:hover {
+  min-width: 120px;
+  min-height: 40px;
+  border-radius: 8px;
+  border: 0.2px solid black;
+  background-color: rgb(122, 244, 244);
+  cursor: pointer;
 }
 
 .MuiInputBase-root {
   min-height: 40px !important;
   height: 40px !important;
-  width: 140px !important;
+  width: 300px !important;
 }
 
 // Tool Component - START
@@ -90,12 +100,193 @@ ul {
   flex-direction: row;
 }
 
-.tool-info {
-  flex: 30%;
+.tool-info-container {
+  position: fixed;
+  margin-top: 73px !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 30%;
+  overflow-y: auto;
 }
 
 .tool-details {
-  flex: 70%;
+  position: fixed;
+  margin-top: 73px !important;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  overflow-y: auto;
 }
 
 // Tool Component - END
+
+// Order Card - START
+.order-card-root {
+  box-sizing: border-box;
+  width: 100%;
+  height: min-content;
+  border-bottom: 0.3px solid black;
+  background-color: rgb(210, 232, 232);
+  cursor: pointer;
+  padding: 20px;
+}
+
+.order-details-body-info-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.order-card-root:hover {
+  background-color: rgb(175, 236, 236);
+}
+
+.order-card-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.order-card-description {
+  margin-bottom: 10px;
+}
+
+.order-card-from {
+  font-weight: bold;
+  font-size: large;
+}
+
+.tool-details-root {
+  padding: 10px;
+}
+
+.type-icon {
+  width: 18px !important;
+  height: 18px !important;
+}
+// Order Card - END
+
+// Order Details - START
+.order-details-root {
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+.order-details-header-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.order-details-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.order-details-info-name {
+  margin-right: 10px;
+}
+
+.order-details-body-info {
+  margin-top: 20px;
+}
+
+.order-details-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.extract-data-button {
+  margin-right: 20px;
+}
+
+.order-details--button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+}
+// Order Details - END
+
+// Toolbar - START
+.tool-tab-root {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgb(211, 180, 242);
+  width: 100%;
+}
+// Toolbar - END
+
+// MODAL - START
+.modal-box {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 80% !important;
+  height: 80% !important;
+  background-color: rgb(219, 242, 245);
+  border-radius: 10px !important;
+  padding: 26px !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  padding-bottom: 50px !important;
+  outline: 0 !important;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+.modal-containter-root {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.modal-body-root {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.modal-bottom-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+// MODAL  - END
+
+//LOADER - START
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(1px);
+  z-index: 999;
+}
+
+.loader-root {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+// LOADER - END
+
+
+// AUDIO
+
+.audio-root {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

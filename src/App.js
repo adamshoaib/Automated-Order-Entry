@@ -1,7 +1,8 @@
 import Home from "./Pages/Home";
-import Tool from "./Pages/Tool";
 import "./index.scss";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ToolTabs from "./Pages/ToolTabs";
+import Tool from "./Components/Organism/Tool";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/tool" element={<Tool />} />
+          <Route path="/tool" element={<ToolTabs />} />
         </Routes>
       </Router>
     </div>

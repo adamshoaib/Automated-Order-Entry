@@ -7,15 +7,15 @@ import dayjs from "dayjs";
 const today = dayjs();
 const yesterday = dayjs().subtract(1, "day");
 
-export default function CalenderPicker() {
+export default function CalenderPicker({ value, label }) {
   const onChange = (value, e) => {
     console.log("Data : ", value, e);
   };
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DatePicker
-        defaultValue={today}
-        disablePast
+        label={label}
+        value={value}
         views={["year", "month", "day"]}
         onChange={onChange}
         className="calender-date-picker"
