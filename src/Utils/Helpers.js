@@ -38,3 +38,31 @@ export const isValidJSON = (data) => {
   }
   return false;
 };
+
+export const getStatusBackgroundColor = (type) => {
+  if (type === "Check Required") {
+    return "#d1b82a";
+  } else if (type === "Delivered") {
+    return "green";
+  } else if (type === "In Transit") {
+    return "yellow";
+  } else if (type === "Created") {
+    return "orange";
+  } else if (type === "Failed" || type === "Need Action") {
+    return "red";
+  }
+};
+
+export const getStatusColor = (type) => {
+  if (type === "Check Required") {
+    return "warning";
+  } else if (type === "Delivered") {
+    return "success";
+  } else if (type === "In Transit") {
+    return "primary";
+  } else if (type === "Created") {
+    return "primary";
+  } else if (type === "Failed") {
+    return "danger";
+  }
+};

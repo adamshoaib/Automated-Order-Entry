@@ -2,7 +2,7 @@ import React, { useState, createRef } from "react";
 import OrderRequests from "./OrderRequests";
 import OrderDetails from "./OrderDetails";
 import { useScreenshot, createFileName } from "use-react-screenshot";
-import dataArray from "../../Utils/Constants";
+import { dataArray } from "../../Utils/Constants";
 import { sensMSGToOpenAI } from "../../Services";
 import ModalBox from "../Modecules/Modal";
 import Loader from "../Atoms/Loader";

@@ -282,11 +282,81 @@ ul {
 }
 // LOADER - END
 
-
 // AUDIO
 
 .audio-root {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+// DATA GRID
+
+.data-grid-root {
+}
+
+// MODAL TRACKING
+
+.modal-tracking-details-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+}
+
+.modal-action-needed-root {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+}
+
+.modal-traking-text {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.model-action-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.model-action-body-dropdown {
+  margin-bottom: 10px;
+}
+
+.data-table-driver-info {
+  margin: 0;
+  cursor: pointer;
+}
+
+.data-table-driver-info:hover {
+  color: rgb(70, 70, 158) !important;
+}
+
+.driver-modal-remark {
+  margin-top: 80px;
+}
+
+.remark-modal-remark {
+  margin-top: 10px;
+}
+
+.remark-modal-submit-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+// DASHBOARD
+
+.dashboard-root {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 50px;
 }
