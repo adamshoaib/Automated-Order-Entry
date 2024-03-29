@@ -10,8 +10,10 @@ export default function DropDown({ options, label, value, handleChange }) {
       <FormControl fullWidth>
         <InputLabel>{label}</InputLabel>
         <Select value={value} label={label} onChange={handleChange}>
-          {options?.map((ele) => (
-            <MenuItem value={ele.key}>{ele.value}</MenuItem>
+          {options?.map((ele, index) => (
+            <MenuItem key={index} value={ele.key}>
+              {ele.value}
+            </MenuItem>
           ))}
         </Select>
       </FormControl>

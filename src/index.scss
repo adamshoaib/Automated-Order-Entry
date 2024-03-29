@@ -360,3 +360,87 @@ ul {
   flex-wrap: wrap;
   padding: 50px;
 }
+
+.help-root {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 100px;
+  margin-bottom: 100px;
+  box-sizing: border-box;
+}
+
+.help-root-dialog {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 150px;
+  margin-bottom: 125px;
+  box-sizing: border-box;
+}
+
+.help-root-dialog {
+  width: 350px;
+  height: 500px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+  padding: 20px;
+}
+
+.help-root-dialo-header {
+  margin: 0;
+}
+
+.help-root-dialo-textbox {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 15px;
+}
+
+.help-root-dialog-root {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.help-root-dialog-conversation {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.help-root-dialog-message-container-bot {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.help-root-dialog-message-container-customer {
+  margin-top: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.help-root-dialog-message-sub-container-customer {
+  border: 0.2px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: rgb(186, 198, 184);
+  width: 250px;
+  display: flex;
+}
+
+.help-root-dialog-message-sub-container-bot {
+  border: 0.2px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: rgb(201, 204, 200);
+  width: 250px;
+}
+
+.help-root-dialog-message-bot {
+  word-wrap: break-word !important;
+}
+
+.help-root-dialog-message-customer {
+}

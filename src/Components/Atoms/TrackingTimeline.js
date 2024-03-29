@@ -54,7 +54,7 @@ export default function TrackingTimeline({ status, details }) {
 
         {details?.map((ele, index) => {
           return (
-            <TimelineItem>
+            <TimelineItem key={index}>
               <TimelineOppositeContent color="textSecondary">
                 {dayjs(ele.date).format("MM/DD/YYYY")}
               </TimelineOppositeContent>

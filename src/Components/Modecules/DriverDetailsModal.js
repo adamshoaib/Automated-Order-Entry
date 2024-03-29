@@ -34,7 +34,9 @@ export default function DriverDetailsModal({ open, details, handleClose }) {
                 </p>
               </div>
               <div>
-                <p className="modal-traking-text">Age : {driverDetails?.age || "missing"}</p>
+                <p className="modal-traking-text">
+                  Age : {driverDetails?.age || "missing"}
+                </p>
               </div>
               <div>
                 <p className="modal-traking-text">
@@ -62,10 +64,12 @@ export default function DriverDetailsModal({ open, details, handleClose }) {
           <div>
             <p className="modal-traking-text">
               Remarks :
-              {driverDetails?.remarks?.map((ele) => {
+              {driverDetails?.remarks?.map((ele, index) => {
                 return (
                   <>
-                    <p className="modal-traking-text">{ele}</p>
+                    <p key={index} className="modal-traking-text">
+                      {ele}
+                    </p>
                   </>
                 );
               })}{" "}

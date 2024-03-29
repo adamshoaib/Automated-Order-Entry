@@ -35,7 +35,8 @@ export default function TrackingModal({ open, details, handleClose }) {
             <div className="modal-tracking-details-info">
               <div>
                 <p className="modal-traking-text">
-                  Tracking Number : {trackingDetails?.trackingNumber || "Missing"}
+                  Tracking Number :{" "}
+                  {trackingDetails?.trackingNumber || "Missing"}
                 </p>
               </div>
               <div>
@@ -88,10 +89,12 @@ export default function TrackingModal({ open, details, handleClose }) {
           <div>
             <p className="modal-traking-text">
               Comments :{" "}
-              {trackingDetails?.comments?.map((ele) => {
+              {trackingDetails?.comments?.map((ele, index) => {
                 return (
                   <>
-                    <p className="modal-traking-text">{ele}</p>
+                    <p key={index} className="modal-traking-text">
+                      {ele}
+                    </p>
                   </>
                 );
               }) || "No Comments to display"}

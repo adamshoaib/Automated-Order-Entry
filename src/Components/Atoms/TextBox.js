@@ -10,10 +10,12 @@ export default function TextBox({
   value,
   disabled = false,
   InputProps = {},
+  placeholder = "",
+  className = "",
 }) {
   return (
     <TextField
-      className="text-field-root"
+      className={`text-field-root ${className}`}
       type={type}
       id={id}
       value={value}
@@ -22,6 +24,7 @@ export default function TextBox({
       onChange={onChange}
       disabled={disabled}
       size="small"
+      placeholder={placeholder}
       InputProps={InputProps}
     />
   );

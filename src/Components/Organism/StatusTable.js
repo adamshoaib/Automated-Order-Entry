@@ -6,10 +6,15 @@ import { getStatusBackgroundColor } from "../../Utils/Helpers";
 import TrackingModal from "../Modecules/TrackingModal";
 import DriverDetailsModal from "../Modecules/DriverDetailsModal";
 import ReportIssueModal from "../Modecules/ReportIssueModal";
+import LiveHelpIcon from "@mui/icons-material/LiveHelp";
+import { Tooltip } from "@mui/material";
+import TextBox from "../Atoms/TextBox";
+import LiveSupportModal from "../Modecules/LiveSupportModal";
 
 export default function StatusTable() {
   const [currentDetails, setCurrentDetails] = React.useState({});
   const [isModalOpen, setIsModalOpen] = React.useState(false);
+  const [isSupportModalOpen, setIsSupportModalOpen] = React.useState(false);
   const [isDriverDetailsModalOpen, setIsDriverDetailsModalOpen] =
     React.useState(false);
   const [isIssueModalOpen, setIsIssueModalOpen] = React.useState(false);
@@ -100,47 +105,67 @@ export default function StatusTable() {
   };
 
   return (
-    <div
-      style={{
-        height: "min-content",
-        width: "66%",
-        alignSelf: "center",
-        fontSize: "1.2rem",
-      }}
-    >
-      <DataGrid
-        rows={Status_data}
-        columns={columns}
-        initialState={{
-          pagination: {
-            paginationModel: { page: 0, pageSize: 10 },
-          },
-        }}
+    <>
+      <div
         style={{
-          fontSize: "1rem",
+          height: "min-content",
+          width: "66%",
+          alignSelf: "center",
+          fontSize: "1.2rem",
         }}
-        className="data-grid-root"
-        pageSizeOptions={[5, 10]}
-        checkboxSelection
-        onRequestTracking={onRequestTracking}
-        onRequestDriverDetails={onRequestDriverDetails}
-        onIssueReport={onIssueReport}
-      />
-      <TrackingModal
-        details={currentDetails}
-        open={isModalOpen}
-        handleClose={handleClose}
-      />
-      <DriverDetailsModal
-        details={currentDetails}
-        open={isDriverDetailsModalOpen}
-        handleClose={handleClose}
-      />
-      <ReportIssueModal
-        details={currentDetails}
-        open={isIssueModalOpen}
-        handleClose={handleClose}
-      />
-    </div>
+      >
+        <DataGrid
+          rows={Status_data}
+          columns={columns}
+          initialState={{
+            pagination: {
+              paginationModel: { page: 0, pageSize: 10 },
+            },
+          }}
+          style={{
+            fontSize: "1rem",
+          }}
+          className="data-grid-root"
+          pageSizeOptions={[5, 10]}
+          checkboxSelection
+          onRequestTracking={onRequestTracking}
+          onRequestDriverDetails={onRequestDriverDetails}
+          onIssueReport={onIssueReport}
+        />
+        <TrackingModal
+          details={currentDetails}
+          open={isModalOpen}
+          handleClose={handleClose}
+        />
+        <DriverDetailsModal
+          details={currentDetails}
+          open={isDriverDetailsModalOpen}
+          handleClose={handleClose}
+        />
+        <ReportIssueModal
+          details={currentDetails}
+          open={isIssueModalOpen}
+          handleClose={handleClose}
+        />
+      </div>
+      {isSupportModalOpen && (
+        <LiveSupportModal
+          handleClose={() => {
+            setIsSupportModalOpen(false);
+          }}
+        />
+      )}
+      <Tooltip title={"Live Support"} placement="top">
+        <div className="help-root">
+          <LiveHelpIcon
+            sx={{ width: 100 }}
+            className="icon-curser-pointer"
+            onClick={() => {
+              setIsSupportModalOpen(!isSupportModalOpen);
+            }}
+          />
+        </div>
+      </Tooltip>
+    </>
   );
 }

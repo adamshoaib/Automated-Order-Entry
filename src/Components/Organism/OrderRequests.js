@@ -33,9 +33,10 @@ const OrderCard = ({ data, onCardClick }) => {
 export default function OrderRequests({ allData, detailClicked }) {
   return (
     <div className="order-requests-root">
-      {allData?.map((details) => {
+      {allData?.map((details, index) => {
         return (
           <OrderCard
+            key={index}
             data={details}
             onCardClick={() => {
               detailClicked(details);
