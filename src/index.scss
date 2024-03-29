@@ -133,6 +133,11 @@ ul {
   padding: 20px;
 }
 
+.order-card-type-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
 .order-details-body-info-image-container {
   display: flex;
   justify-content: center;
@@ -375,7 +380,7 @@ ul {
   bottom: 0;
   right: 0;
   margin-right: 150px;
-  margin-bottom: 125px;
+  margin-bottom: 129px;
   box-sizing: border-box;
 }
 
@@ -396,6 +401,8 @@ ul {
   position: absolute;
   bottom: 0;
   margin-bottom: 15px;
+  display: flex;
+  align-items: center;
 }
 
 .help-root-dialog-root {
@@ -443,4 +450,11 @@ ul {
 }
 
 .help-root-dialog-message-customer {
+}
+
+.icon-curser-pointer {
+  margin-left: 1px;
+}
+
+.flagged-icon-false {
 }

@@ -18,6 +18,7 @@ export default function Tool() {
   const [generateOutput, setGenerateOutput] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [data, setData] = useState(dataArray);
 
   const handleSubmit = (image, { name = "img", extension = "jpg" } = {}) => {
     setIsLoading(true);
@@ -64,6 +65,9 @@ export default function Tool() {
   };
 
   const processData = (data) => {};
+  const updateData = (data) => {
+    setData(data);
+  };
 
   return (
     <>
@@ -71,8 +75,9 @@ export default function Tool() {
         <div class="tool-info-container">
           <div className="tool-info">
             <OrderRequests
-              allData={dataArray}
+              allData={data}
               detailClicked={(data) => setSlectedInfo(data)}
+              updateData={updateData}
             />
           </div>
         </div>
@@ -84,6 +89,7 @@ export default function Tool() {
               extractInfo={extractInfo}
               isDataExtracted={generateOutput !== null}
               displayInfoInModal={() => displayInfoInModal()}
+              updateData={updateData}
             />
           </div>
         </div>

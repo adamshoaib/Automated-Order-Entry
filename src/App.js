@@ -1,4 +1,3 @@
-import Home from "./Pages/Home";
 import "./index.scss";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ToolTabs from "./Pages/ToolTabs";
@@ -9,7 +8,7 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<ToolTabs />} />
           <Route path="/tool" element={<ToolTabs />} />
         </Routes>
       </Router>

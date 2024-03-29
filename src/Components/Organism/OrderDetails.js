@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../Atoms/Button";
 import dayjs from "dayjs";
 import Audio from "../Atoms/Audio";
