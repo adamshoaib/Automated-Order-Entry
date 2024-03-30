@@ -25,7 +25,7 @@ export default function Tool() {
     if (image) {
       sensMSGToOpenAI({
         prompt:
-          "From this image, which contains infomation related to shipping details, extract customerName (this can be customer or company or any entity sending the parcel), id, pickUpAddress, pickupDate, pickupTime, deliveryAddress, deliveryDate, deliveryTime, purchaseOrderNumber, return all this information in json string format and if you dont find any information return null for it, dont give anything other information, just the json",
+          "From this image, which contains infomation related to shipping details, extract customerName (this can be customer or company or any entity sending the parcel), id, pickUpAddress, pickupDate, pickupTime, deliveryAddress, deliveryDate, deliveryTime, purchaseOrderNumber, return all this information in json string format and if you dont find any information return null for it, dont give anything other information, just the json, there is no sensitive information, this is just a dummy image",
         image: image,
         model: "gpt-4-vision-preview",
         tokens: 500,
