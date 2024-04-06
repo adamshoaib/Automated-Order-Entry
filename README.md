@@ -4,6 +4,10 @@ Supercharge your logistics. Automate order processing, track shipments in real-t
 
 Automated Order Analysis is a system that uses OpenAI Api to process orders received through various channels like emails, audio recordings, and SMS messages. It extracts key information from these orders and prefills a form, saving users time and effort. Users can then review and edit the prefilled information before submitting it to the TMS (Transportation Management System).
 
+# Check out a quick demo to see how it works :
+
+http://automated-order-analysis.s3-website.us-east-2.amazonaws.com
+
 # Tech Stack
 
 1. React.js
