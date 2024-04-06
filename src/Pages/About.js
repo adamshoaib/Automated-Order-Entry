@@ -11,14 +11,30 @@ export default function About() {
   return (
     <div className="about-root">
       <div className="about-center-header-align">
-        <p className="about-header">
+        <p className="about-header" style={{ textAlign: "center" }}>
           Supercharge your logistics. Automate order processing, track shipments
           in real-time, and gain data-driven insights with our logistics
           dashboard. It's everything you need to automate your workflow.
         </p>
-        <p className="about-sub-header">
-          The Vooma Clone Project is a idea aimed at replicating the
-          functionalities and features of the popular Vooma platform.
+        <p className="about-sub-header" style={{ textAlign: "center" }}>
+          Automated Order Analysis is a system that uses OpenAI Api to process
+          orders received through various channels like emails, audio
+          recordings, and SMS messages. It extracts key information from these
+          orders and prefills a form, saving users time and effort. Users can
+          then review and edit the prefilled information before submitting it to
+          the TMS (Transportation Management System).
+        </p>
+        <p
+          className="about-sub-header"
+          style={{ marginTop: 10, textAlign: "center" }}
+        >
+          This system offers a user-friendly interface for real-time shipment
+          management (features currently static for demonstration purposes).
+          Users can track their courier's location, report transportation
+          issues, and access driver details. A built-in dashboard provides
+          valuable analytics to help users gain insights into their order
+          fulfillment process. The application also has a live chat Bot which
+          helps in resolving the queries related to the orders.
         </p>
       </div>
       <div className="about-center-img-align">
@@ -73,7 +89,7 @@ export default function About() {
       <div className="about-footer-container">
         <p className="about-footer-text">
           Have suggestions? We value your feedback! Contact us at
-          akareems@asu.edu.
+          k.adamshoaib@gmail.com.
         </p>
       </div>
     </div>

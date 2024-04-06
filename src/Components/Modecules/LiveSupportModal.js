@@ -27,7 +27,7 @@ const messgePool = [
 export default function LiveSupportModal({ handleClose }) {
   const [conversation, setConversation] = useState([
     {
-      message: "Hello Customer, I am Vooma Bot. How may I assist you ?",
+      message: "Hello Customer, How may I assist you ?",
       sender: "bot",
     },
   ]);
@@ -79,9 +79,9 @@ export default function LiveSupportModal({ handleClose }) {
           <div className="help-root-dialog-root">
             <div>
               <p className="help-root-dialo-header">
-                Welcome to Vooma live support{" "}
+                Welcome to our live support{" "}
               </p>
-              <p className="help-root-dialo-header">Powered by Vooma AI Bot </p>
+              <p className="help-root-dialo-header">Powered by AI Bot </p>
             </div>
             <div>
               <Tooltip title={"Close"} placement="bottom">
